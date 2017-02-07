@@ -66,7 +66,7 @@ hist(twototallyrandom)
 tentotallyrandom <- replicate(100, sample(maggiesrandom, 10))
 mean(tentotallyrandom)
 hist(tentotallyrandom)
-
+ 
 #myattempatfunction
 
 mean.of.two<-function(i){

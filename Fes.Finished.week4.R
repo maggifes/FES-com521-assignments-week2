@@ -48,9 +48,19 @@ maggiemerges.df<-merge(montlyviews, total.views, by.x = "months", by.y = "months
 maggiemerges.df$percentage<-(maggiemerges.df$total.y/maggiemerges.df$total.x)*100
 list(maggiemerges.df)
 
+#you needed to do:
+#maggiemerges.df = merge(mobile.views, total.views, all.x=TRUE, all.y=TRUE, by.x = "months", by.y = "months")
 maggiemerges.df$months<- gsub(x=maggiemerges.df$months, pattern = "12:00:00 AM", replacement = "", fixed = T)
 maggiemerges.df$months<- as.Date(maggiemerges.df$months, "%m/%d/%Y")
 list(maggiemerges.df$months)
 
+#Makos way:
+#views$months<-as.Date(views$month, format = "%m/%d/%y)
+#sort.list(views$months)
+#views<- views[sort.list(views$months),]
+#complete.cases(views)
+
+
 library(ggplot2)
 > ggplot(data=maggiemerges.df)+geom_point()+aes(x = maggiemerges.df$months, y = maggiemerges.df$percentage)
+
