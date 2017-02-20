@@ -56,6 +56,7 @@ mean(TOTALdata$DeathAge, na.rm = TRUE)
 
 #PC3 Do a t-test between mice with any RD40 and mice with at least a small amount. Run a t-test between the group with a high dosage and control group. How would you go about doing it using formula notation? Be ready to report, interpret, and discuss the results in substantive terms.
 t.test(TOTALdata$DeathAge[TOTALdata$Group=="control"], TOTALdata$DeathAge[TOTALdata$Group!="control"])
+
 #p-value = .0001806 we reject the null/accept alternative 
 
 #PC4

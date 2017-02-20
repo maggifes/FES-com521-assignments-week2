@@ -47,8 +47,19 @@ newlion<-lion
 newlion[newlion==0]<- NA
 newlion[is.na(newlion)]<-0
 
-# Now that you have recoded your data in PC7, generate new summaries for those three variables. Also, go back and regenerate the visualizations. How have these changed? How are these different from the summary detail you presented above?
-summary(safe.data.week3$x)
-summary(safe.data.week3$i)
-summary(safe.data.week3$j)
+#PC4
+
+#a just x
+lm(eskimo ~ spiderman, data = safe.data.week3)
+
+#Call:
+#lm(formula = eskimo ~ spiderman, data = safe.data.week3)
+
+#Coefficients:
+#  (Intercept)    spiderman  
+#0.8186       0.1700 
+
+#Positive linear relationship, crossing just over .8
+
+
 ggplot(data=safe.data.week3) + geom_point() + aes(x=x, y=y, color=i, shape=j,size=k)
